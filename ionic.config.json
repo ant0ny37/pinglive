@@ -1,0 +1,8 @@
+{
+  "name": "pinglive",
+  "app_id": "0484f5ad",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
