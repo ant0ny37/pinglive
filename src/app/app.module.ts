@@ -9,6 +9,7 @@ import { Loading } from 'ionic-angular/components/loading/loading';
 
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
+import { TwitterConnect } from '@ionic-native/twitter-connect';
 import { HttpModule } from '@angular/http';
 
 import { AngularFireModule } from 'angularfire2';
@@ -64,6 +65,7 @@ export const authConfig = {
     SplashScreen,
     Facebook,
     GooglePlus,
+    TwitterConnect,
     AuthProvider,
     AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

@@ -50,4 +50,14 @@ export class LoginPage {
       this.hasError = true;
     });
   }
+
+  signInWithTwitter() {
+
+    this.auth.signInWithTwitter()
+    .then((result) => {
+      this.navCtrl.setRoot(TabsPage);
+    }, (error) => {
+      this.hasError = true;
+    });
+  }
 }

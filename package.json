@@ -25,20 +25,21 @@
     "@ionic-native/google-plus": "^4.5.2",
     "@ionic-native/splash-screen": "4.4.0",
     "@ionic-native/status-bar": "4.4.0",
+    "@ionic-native/twitter-connect": "^4.5.2",
     "@ionic/pro": "1.0.16",
     "@ionic/storage": "2.1.3",
-    "angularfire2": "^5.0.0-rc.4",
+    "angularfire2": "^5.0.0-rc.5-next",
     "cordova-android": "6.3.0",
     "cordova-browser": "5.0.3",
     "cordova-plugin-browsertab": "^0.2.0",
     "cordova-plugin-buildinfo": "^2.0.1",
     "cordova-plugin-compat": "^1.2.0",
-    "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-facebook4": "^1.9.1",
     "cordova-plugin-googleplus": "^5.2.1",
     "cordova-plugin-ionic-webview": "^1.1.16",
-    "cordova-plugin-splashscreen": "^4.0.3",
-    "cordova-plugin-whitelist": "^1.3.1",
+    "cordova-plugin-splashscreen": "^4.1.0",
+    "cordova-plugin-whitelist": "^1.3.3",
     "cordova-universal-links-plugin": "^1.2.1",
     "firebase": "^4.8.2",
     "ionic-angular": "3.9.2",
@@ -47,6 +48,7 @@
     "promise-polyfill": "^7.0.0",
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
+    "twitter-connect-plugin": "^0.6.0",
     "zone.js": "0.8.18"
   },
   "devDependencies": {
@@ -69,7 +71,10 @@
         "APP_NAME": "Pinglive"
       },
       "cordova-plugin-googleplus": {
-        "REVERSED_CLIENT_ID": "927441709962-dshnsflud9vj7lcvhcgi3dvj0iqhno4e.apps.googleusercontent.com"
+        "REVERSED_CLIENT_ID": "475003173933-5pqdcnojb85qinpnl1vc2112dpb8aad8.apps.googleusercontent.com"
+      },
+      "twitter-connect-plugin": {
+        "FABRIC_KEY": "effa40c2343f004b7fb138737741d1b6160ff4ff"
       }
     },
     "platforms": [
