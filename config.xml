@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.pinglive.android" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>pinglive</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <description>Application mobile pour les joueurs de tennis de table</description>
+    <author email="contact@pinglive.net" href="http://pinglive.net/">L'équipe Pinglive</author>
     <universal-links>
         <host name="https://uzm85.app.goo.gl" scheme="https" />
         <host name="pinglive-6ec8a.firebaseapp.com" scheme="https">
@@ -87,10 +87,10 @@
     <allow-navigation href="http://192.168.1.16:8100" />
     <allow-navigation href="http://192.168.43.214:8100" />
     <allow-navigation href="http://192.168.1.10:8100" />
+    <allow-navigation href="http://10.20.14.129:8100" />
     <engine name="android" spec="6.3.0" />
     <engine name="browser" spec="5.0.3" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-device" spec="^1.1.7" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.1.0" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
@@ -107,4 +107,6 @@
     <plugin name="twitter-connect-plugin" spec="^0.6.0">
         <variable name="FABRIC_KEY" value="effa40c2343f004b7fb138737741d1b6160ff4ff" />
     </plugin>
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^2.0.1" />
 </widget>

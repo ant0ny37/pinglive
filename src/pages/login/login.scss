@@ -1,3 +1,123 @@
 page-login {
-
-}
+    div {
+      text-align: center;
+  
+      .top {
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        img {
+          width: 60vw;
+        }
+      }
+  
+      .bottom {
+        height: 60vh;
+  
+        .buttons {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+  
+        p {
+          color: #ffc515;
+          font-size: 1.1em;
+        }
+  
+        p.activated,
+        p:active {
+          color: $primary;
+        }
+  
+        button {
+          width: 80vw;
+          margin-top: 0.5em;
+        }
+  
+        button.facebook {
+          background: $facebook;
+        }
+  
+        button.facebook.activated,
+        button.facebook:active {
+          background: $facebook-active;
+        }
+  
+        button.google {
+          background: $google;
+        }
+  
+        button.google.activated,
+        button.google:active {
+          background: $google-active;
+        }
+  
+        button.secondary {
+          background: $secondary;
+        }
+  
+        button.secondary.activated,
+        button.secondary:active {
+          background: $secondary-active;
+        }
+  
+        button.dark {
+          background: #ffc515;
+        }
+  
+        button.dark.activated,
+        button.dark:active {
+          background: $dark-active;
+        }
+  
+        .form {
+          background: rgba(0, 0, 0, 0.6);
+          width: 100%;
+          height: 100%;
+  
+          p {
+            width: 70vw;
+            margin-left: auto;
+            margin-right: auto;
+          }
+  
+          ion-list {
+            padding: 0;
+            margin: 0 0 0.75em;
+  
+            ion-item {
+              background: transparent;
+              color: #fff;
+  
+              ion-label {
+                text-align: left;
+                width: 24vw;
+              }
+  
+              ion-input {
+                color: #fff;
+                border: 1px solid #fff;
+                height: 40px;
+                border-radius: 25px;
+                padding-left: 8px;
+              }
+            }
+          }
+  
+          button.clear {
+            margin: 0;
+            width: auto !important;
+            background: transparent !important;
+          }
+  
+          button.clear.activated {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }  

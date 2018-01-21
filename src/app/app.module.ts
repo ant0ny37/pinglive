@@ -10,18 +10,24 @@ import { Loading } from 'ionic-angular/components/loading/loading';
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { TwitterConnect } from '@ionic-native/twitter-connect';
-import { HttpModule } from '@angular/http';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
-
-import { AuthProvider } from '../providers/auth/auth';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PlayerPage } from '../pages/player/player';
 import { SearchPage } from '../pages/search/search';
-import { DbProvider } from '../providers/db/db';
+
+import { LoginProvider } from '../providers/login';
+import { LogoutProvider } from '../providers/logout';
+import { LoadingProvider } from '../providers/loading';
+import { DataProvider } from '../providers/data';
+import { AlertProvider } from '../providers/alert';
+
+import * as firebase from 'firebase';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { Login } from '../login';
 
 export const authConfig = {
   production: false,
@@ -35,6 +41,8 @@ export const authConfig = {
   }
 };
 
+firebase.initializeApp(Login.firebaseConfig);
+
 @NgModule({
   declarations: [
     MyApp,
@@ -46,11 +54,9 @@ export const authConfig = {
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireAuthModule,
-    AngularFireModule.initializeApp(authConfig.firebase),
+    AngularFireModule.initializeApp(Login.firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    HttpModule
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -66,10 +72,12 @@ export const authConfig = {
     Facebook,
     GooglePlus,
     TwitterConnect,
-    AuthProvider,
-    AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DbProvider
+    LoginProvider, 
+    LogoutProvider, 
+    LoadingProvider, 
+    DataProvider,
+    AlertProvider
   ]
 })
 export class AppModule {}
