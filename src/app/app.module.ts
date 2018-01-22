@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Loading } from 'ionic-angular/components/loading/loading';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
@@ -13,8 +14,10 @@ import { TwitterConnect } from '@ionic-native/twitter-connect';
 
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
-import { PlayerPage } from '../pages/player/player';
+import { ProfilePage } from '../pages/profile/profile';
 import { SearchPage } from '../pages/search/search';
+import { BookmarksPage } from '../pages/bookmarks/bookmarks';
+import { AddLicensePage } from '../pages/add-license/add-license';
 
 import { LoginProvider } from '../providers/login';
 import { LogoutProvider } from '../providers/logout';
@@ -48,8 +51,10 @@ firebase.initializeApp(Login.firebaseConfig);
     MyApp,
     LoginPage,
     TabsPage,
-    PlayerPage,
-    SearchPage
+    ProfilePage,
+    SearchPage,
+    BookmarksPage,
+    AddLicensePage
   ],
   imports: [
     BrowserModule,
@@ -63,8 +68,10 @@ firebase.initializeApp(Login.firebaseConfig);
     MyApp,
     LoginPage,
     TabsPage,
-    PlayerPage,
-    SearchPage
+    ProfilePage,
+    SearchPage,
+    BookmarksPage,
+    AddLicensePage
   ],
   providers: [
     StatusBar,
@@ -77,7 +84,8 @@ firebase.initializeApp(Login.firebaseConfig);
     LogoutProvider, 
     LoadingProvider, 
     DataProvider,
-    AlertProvider
+    AlertProvider,
+    NativePageTransitions
   ]
 })
 export class AppModule {}

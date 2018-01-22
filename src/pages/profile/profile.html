@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mon profil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="empty-list" *ngIf="profile == null">
+    <h1><ion-icon name="md-person"></ion-icon></h1>
+    <p>Vous n'avez pas encore renseigné votre numéro de licence</p>
+    <button ion-button icon-left tappable (click)="addLicense()"><ion-icon name="md-add"></ion-icon>Ajouter ma licence</button>
+  </div>
+  
+  <div *ngIf="profile != null"></div>
+</ion-content>

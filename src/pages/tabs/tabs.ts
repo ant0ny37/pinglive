@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 
-import { PlayerPage } from '../player/player';
+import { ProfilePage } from '../profile/profile';
 import { SearchPage } from '../search/search';
+import { BookmarksPage } from '../bookmarks/bookmarks';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = PlayerPage;
-  tab2Root = SearchPage;
+  profile: any = ProfilePage;
+  search: any = SearchPage;
+  bookmarks: any = BookmarksPage;
 
   constructor() {
 
